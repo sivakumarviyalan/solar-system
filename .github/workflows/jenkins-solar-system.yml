@@ -1,6 +1,8 @@
 name: Solar System Workflow
 on: 
   push:
+    branches:
+      - 'branch-b'
   workflow_dispatch:
 jobs:
   unit-testing:
