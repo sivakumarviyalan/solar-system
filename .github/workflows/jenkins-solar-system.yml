@@ -3,6 +3,7 @@ name: Solar System Workflow
 on: 
   push: 
     branches: ["branch-b"]
+
   workflow_dispatch:
 
 jobs:
@@ -12,9 +13,14 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
+
     - name: Setup NodeJS
       uses: actions/setup-node@v4
       with: 
         node-version: 22
+
     - name: Install Dependencies
       run: npm install --no-audit
+
+    - name: Unit Testing
+      run: npm test
