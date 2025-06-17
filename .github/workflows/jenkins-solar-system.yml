@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         operating_system: [ubuntu-latest, macos-latest]
-        nodejs-version: [20,21,22]
+        nodejs_version: [20,21,22]
     runs-on: ${{matrix.operating_system}}
     steps:
       - name: Checkout Repository
